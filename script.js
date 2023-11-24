@@ -72,3 +72,18 @@ console.log(`The additional space required is: ${additionalSpace} square meters.
 
 let expandedGardenRadius = Math.sqrt(plantSpaceAfter10Week / PI);
 console.log(`If the space remained circular, the radius of this expanded garden would be: ${expandedGardenRadius} meters.`);
+
+
+// Part 3: Errors in Judgement
+try {
+    if (startPlantNumber100*0.8 <= totalGardenArea){
+        console.log("Good job, keep going!");
+    }
+    else {
+        throw "There are too many plants to start in this garden space."
+    }
+} catch (error) {
+    console.log(error);
+} finally {
+    console.log(`The required space for that 100 plants is ${startPlantNumber100*0.8} square meters in the garden of ${totalGardenArea} square meters.`)
+}
