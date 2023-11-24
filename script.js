@@ -68,5 +68,7 @@ console.log(`After 10 weeks, the total plant number is: ${plantNumberAfter10Week
 
 const plantSpaceAfter10Week = plantNumberAfter10Week*0.8;
 let additionalSpace = plantSpaceAfter10Week - totalGardenArea;
-console.log(`After 10 weeks, the additional space required is: ${additionalSpace} square meters.`);
-// let expandedGardenRadius = 
+console.log(`The additional space required is: ${additionalSpace} square meters.`);
+
+let expandedGardenRadius = Math.sqrt(plantSpaceAfter10Week / PI);
+console.log(`If the space remained circular, the radius of this expanded garden would be: ${expandedGardenRadius} meters.`);
