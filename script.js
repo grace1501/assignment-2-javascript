@@ -1,48 +1,16 @@
-// let x = 10;
+// Part 1: Growing Pains
 
-// let alertMessage = "This is an error alert message";
+// The area in which the plants are contained is circular, with a radius of 5 meters.
+// Each plant requires a minimum space of 0.8 square meters.
+// The area is starting with 20 plants.
+// The plants double in number every week.
 
-// try {
-//     if (x < 0) {
-//         console.log("Negative!");
-//     } else {
-//         throw alertMessage;
-//     }
-// } catch (error) {
-//     console.log(error);
-// } finally {
-//     console.log("Does this log finally?");
-// }
+const areaRadius = 5;
+const PI = 3.1415;
+const area = PI * radius * radius;
 
-// x = -10;
+const plantRadius = 0.8;
+const startPlantNumber = 20;
 
-// try {
-// 	if (x > 0) {
-// 		let isEven = (x % 2 == 0) ? true : false;
-//         console.log(isEven);
-// 	} else if (x <= 0) {
-// 		throw "Error - Value of 0 or below.";
-// 	}	
-// } catch (err) {
-// 	console.log(err);
-// } finally {
-// 	console.log(x);
-// }
-
-let x = 10;
-        let isEven;
-
-        try {
-            if (x > 0) {
-                isEven = (x % 2 == 0) ? false : true;
-            } else if (x <= 0) {
-                throw "Error - Value of 0 or below.";
-            }
-
-            console.log(isEven);
-        } catch (err) {
-            console.log(err);
-        } finally {
-            console.log(x);
-        }
-
+// Result AFTER 1 WEEK
+let plantNumberWeek1 = startPlantNumber*2;
