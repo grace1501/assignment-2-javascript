@@ -14,16 +14,17 @@ const totalGardenArea = PI * gardenRadius * gardenRadius;
 const plantSpace = 0.8;
 
 const startPlantNumber = 20;
-let plantNumberAfterNWeek;
+// Week 0: 20 plants
 
 let prunedDecision = "Let's prune the plants, they are exceeding the capacity of the garden."
 let monitoredDecision = "It's ok for now, the plants are growing at an acceptable rate."
 let plantedDecision = "There is room to plant more plants."
 
-// Result AFTER 1 WEEK
-plantNumberAfterNWeek = startPlantNumber*2;
-console.log(`After 1 week, the total plant number is: ${plantNumberAfterNWeek}`)
-let growingRatio = (plantNumberAfterNWeek * plantSpace) / totalGardenArea;
+
+// Result after 1 week
+let plantNumberAfter1Week = startPlantNumber*(2**1);
+console.log(`After 1 week, the total plant number is: ${plantNumberAfter1Week}`)
+let growingRatio = (plantNumberAfter1Week * plantSpace) / totalGardenArea;
 
 if ( growingRatio < 0.5) {
     console.log(plantedDecision);
@@ -32,3 +33,40 @@ if ( growingRatio < 0.5) {
 } else {
     console.log(prunedDecision);
 }
+
+// Result after 2 weeks
+let plantNumberAfter2Week = startPlantNumber*(2**2);
+console.log(`After 2 weeks, the total plant number is: ${plantNumberAfter2Week}`)
+growingRatio = (plantNumberAfter2Week * plantSpace) / totalGardenArea;
+
+if ( growingRatio < 0.5) {
+    console.log(plantedDecision);
+} else if (growingRatio <= 0.8) {
+    console.log(monitoredDecision)
+} else {
+    console.log(prunedDecision);
+}
+
+// Result after 3 weeks
+let plantNumberAfter3Week = startPlantNumber*(2**3);
+console.log(`After 3 weeks, the total plant number is: ${plantNumberAfter3Week}`)
+growingRatio = (plantNumberAfter3Week * plantSpace) / totalGardenArea;
+
+if ( growingRatio < 0.5) {
+    console.log(plantedDecision);
+} else if (growingRatio <= 0.8) {
+    console.log(monitoredDecision)
+} else {
+    console.log(prunedDecision);
+}
+
+
+// Part 2: Thinking Bigger
+const startPlantNumber100 = 100;
+const plantNumberAfter10Week = startPlantNumber100*(2**10);
+console.log(`After 10 weeks, the total plant number is: ${plantNumberAfter10Week}`)
+
+const plantSpaceAfter10Week = plantNumberAfter10Week*0.8;
+let additionalSpace = plantSpaceAfter10Week - totalGardenArea;
+console.log(`After 10 weeks, the additional space required is: ${additionalSpace} square meters.`);
+// let expandedGardenRadius = 
